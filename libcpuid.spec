@@ -62,7 +62,7 @@ applications which will use %{name}.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q n %{name}-master
+%setup -qn %{name}-master
 
 %build
 autoreconf -fi
