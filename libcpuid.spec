@@ -6,12 +6,11 @@ Summary:	Small C library for x86 CPU detection and feature extraction
 Name:		libcpuid
 # Version extracted from configure.ac file
 Version:	0.4.1
-Release:	3.git.07.12.2018
+Release:	4
 License:	BSD
 Group:		System/Libraries
 Url:		http://libcpuid.sourceforge.net
-#Source0:	https://github.com/anrieff/libcpuid/archive/v%{version}.tar.gz?/%{name}-%{version}.tar.gz
-Source: %{name}-master-07.12.2018.zip
+Source0:	https://github.com/anrieff/libcpuid/archive/v%{version}/%{name}-%{version}.tar.gz
 
 %description
 Small C library for x86 CPU detection and feature extraction.
@@ -62,12 +61,12 @@ applications which will use %{name}.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -qn %{name}-master
+%setup -q
 
 %build
 autoreconf -fi
-%configure2_5x --disable-static
-%make
+%configure --disable-static
+%make_build
 
 %install
-%makeinstall_std
+%make_install
