@@ -1,4 +1,4 @@
-%define major 14
+%define major 15
 %define libname %mklibname cpuid %{major}
 %define devname %mklibname cpuid -d
 
