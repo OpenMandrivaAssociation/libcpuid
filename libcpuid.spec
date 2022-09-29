@@ -4,7 +4,7 @@
 
 Summary:	Small C library for x86 CPU detection and feature extraction 
 Name:		libcpuid
-Version:	0.5.1
+Version:	0.6.0
 Release:	1
 License:	BSD
 Group:		System/Libraries
