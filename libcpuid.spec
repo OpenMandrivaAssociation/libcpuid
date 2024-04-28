@@ -1,14 +1,15 @@
 %define major 16
-%define libname %mklibname cpuid %{major}
+%define libname %mklibname cpuid
+%define oldlibname %mklibname cpuid 16
 %define devname %mklibname cpuid -d
 
 Summary:	Small C library for x86 CPU detection and feature extraction 
 Name:		libcpuid
-Version:	0.6.4
+Version:	0.6.5
 Release:	1
 License:	BSD
 Group:		System/Libraries
-Url:		http://libcpuid.sourceforge.net
+Url:		https://libcpuid.sourceforge.net
 Source0:	https://github.com/anrieff/libcpuid/archive/v%{version}/%{name}-%{version}.tar.gz
 
 %description
@@ -31,6 +32,7 @@ Tools for x86 CPU detection and feature extraction.
 %package -n %{libname}
 Summary:	Small C library for x86 CPU detection and feature extraction
 Group:		System/Libraries
+%rename %{oldlibname}
 
 %description -n %{libname}
 This package contains the library needed to run programs dynamically
