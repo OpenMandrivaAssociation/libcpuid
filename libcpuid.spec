@@ -12,6 +12,11 @@ Group:		System/Libraries
 Url:		https://libcpuid.sourceforge.net
 Source0:	https://github.com/anrieff/libcpuid/archive/v%{version}/%{name}-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 Small C library for x86 CPU detection and feature extraction.
 
